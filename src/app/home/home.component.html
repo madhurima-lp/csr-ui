@@ -1,58 +1,53 @@
-<!-- <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-            opened>
-          <mat-toolbar>Menu</mat-toolbar>
-          <mat-nav-list>
-            <a mat-list-item href="#">Link 1</a>
-            <a mat-list-item href="#">Link 2</a>
-            <a mat-list-item href="#">Link 3</a>
-          </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content>
-          <mat-toolbar color="primary">
-            <button
-              type="button"
-              aria-label="Toggle sidenav"
-              mat-icon-button
-              (click)="drawer.toggle()"
-              *ngIf="isHandset$ | async">
-              <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-            </button>
-            <span>csr-ui</span>
-          </mat-toolbar>
-          Add Content Here 
 
+      
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Main Sidebar -->
+        <aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
+          <div class="main-navbar">
+            <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
 
-
-          content
-        </mat-sidenav-content>
-      </mat-sidenav-container>
-
-
-
-
-      ontent
-       -->
-
-
-
-
-
-
-       <mat-sidenav-container class="example-container" *ngIf="shouldRun">
-            <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-                         (closed)="events.push('close!')">
-              Sidenav content
-            </mat-sidenav>
-          
-            <mat-sidenav-content>
-              <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p>
-              <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-              <p>Events:</p>
-              <div class="example-events">
-                <div *ngFor="let e of events">{{e}}</div>
-              </div>
-            </mat-sidenav-content>
-          </mat-sidenav-container>
-          
+                <div class="d-table m-auto">
+                  <span class="d-none d-md-inline ml-1"> Dashboard</span>
+                </div>
+              <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
+                <!-- <i class="material-icons">&#xE5C4;</i> -->
+              </a>
+            </nav>
+          </div>
+          <div class="nav-wrapper">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <!-- <i class="material-icons">edit</i> -->
+                  <span>Blog Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- End Main Sidebar -->
+        <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+          <div class="main-navbar sticky-top bg-white">
+            <!-- Main Navbar -->
+            <nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+            
+              <ul class="navbar-nav border-left flex-row ">
+              </ul>
+              <nav class="nav">
+                <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
+                  <!-- <i class="material-icons">&#xE5D2;</i> -->
+                </a>
+              </nav>
+            </nav>
+          </div>
+          <!-- / .main-navbar -->
+          <div class="main-content-container container-fluid px-4">
+            <!-- Page Header -->
+            <router-outlet></router-outlet>
+            </div>
+        </main>
+      </div>
+    </div>
+ 
           
