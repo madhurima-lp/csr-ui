@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-events: string[] = [];
-  opened: boolean;
-
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
-  constructor() { }
-
+  constructor(private router: Router) { 
+  }
   ngOnInit() {
+  }
+ 
+  childNav(path){
+    this.router.navigate(['/home/' + path]);
   }
 }
